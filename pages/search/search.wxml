@@ -1,0 +1,12 @@
+<view class="top">
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" class="search"/>
+  <van-button color="#19c8ab">搜索</van-button>
+</view>
+
+<view class="boottom">
+  <block wx:for="{{searchData}}" wx:key="*this">
+    <view wx:for="{{item.goods}}" class="goods">
+      <view class="goods-item">{{item.goods_name}}</view>
+    </view>
+  </block>
+</view>

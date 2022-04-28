@@ -1,0 +1,22 @@
+<van-search value="{{ value }}" input-align="center" placeholder="搜索" bindtap="hit" />
+
+<view class="navs">
+  <scroll-view scroll-y class="left">
+    <van-sidebar active-key="0">
+      <van-sidebar-item wx:for="{{navLeftCon}}" wx:key="*this" title="{{item.cat_name}}" bindtap="onChange" data-i="{{index}}" />
+    </van-sidebar>
+  </scroll-view>
+  <view class="navs-r">
+    <view class="cont">
+      <view class="top">/ {{title}} /</view>
+      <scroll-view scroll-y>
+        <view class="goods">
+          <view wx:for="{{children}}" wx:key="*this" class="good">
+            <image src="{{item.cat_icon}}"></image>
+            <view>{{item.cat_name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

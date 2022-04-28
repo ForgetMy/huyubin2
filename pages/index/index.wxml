@@ -1,0 +1,37 @@
+<van-search value="{{ value }}" input-align="center" placeholder="搜索" bindtap="hit"/>
+<view class="box">
+  <swiper indicator-dots autoplay interval="2000" duration="500">
+    <block wx:for="{{bannerList}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.image_src}}" class="img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="nav">
+  <view wx:for="{{navList}}" wx:key="index" class="nav-box">
+    <image src="{{item.image_src}}"></image>
+  </view>
+</view>
+
+
+<view class="floors">
+  <block wx:for="{{floorList}}" wx:key="*this">
+    <view class="floor-item">
+      <view class="floor-title">
+        <image src="{{item.floor_title.image_src}}"></image>
+      </view>
+      <view class="floor-imgs">
+        <view class="floor-imgs-big">
+          <image src="{{item.product_list[0].image_src}}"></image>
+        </view>
+        <view class="floor-imgs-small">
+          <block wx:for="{{item.product_list}}" wx:key="*this" wx:if="{{index!==0}}">
+            <image src="{{item.image_src}}"></image>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

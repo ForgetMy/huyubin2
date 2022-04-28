@@ -1,0 +1,51 @@
+.img{
+  width: 100%;
+  height: 100%;
+}
+.nav{
+  width: 100%;
+  display: flex;
+  margin-top: 30rpx;
+}
+.nav-box image{
+  width: 190rpx;
+  height: 190rpx;
+}
+
+.floors .floor-item {
+  width: 100vw;
+  padding: 0 10rpx;
+  margin: 40rpx 0;
+  box-sizing: border-box;
+}
+.floors .floor-item .floor-title {
+  width: 100vw;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+.floors .floor-item .floor-title image {
+  width: 100%;
+  height: 100%;
+}
+.floor-imgs{
+  width: calc(100vw - 20rpx);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.floor-imgs .floor-imgs-big{
+  width: 232rpx;
+}
+.floor-imgs .floor-imgs-big image{
+  width: 100%;
+}
+.floor-imgs-small{
+  width: calc(100vw - 262rpx);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.floor-imgs-small image{
+  width: 232rpx;
+  height: 234rpx;
+}
